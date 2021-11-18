@@ -36,6 +36,8 @@ class InventoryController extends BaseController
             $user->remember_token = $success['token'];
             $user->save();
 
+            //create an instance of logs model
+
             $logs = new Logs();
             $logs->userid = $user->id;
             $logs->log = "Login";
@@ -96,4 +98,20 @@ class InventoryController extends BaseController
     }
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
